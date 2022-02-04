@@ -1,0 +1,45 @@
+.new-game-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 32px auto;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.new-game-container .logo{
+  width: 115px;
+  margin-left: 0px
+}
+
+.new-game-container .content {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-game-container .content section {
+    width: 100%;
+    max-width: 380px;
+}
+
+.new-game-container .content section h1 {
+    margin: 64px 0 32px;
+    font-size: 32px;
+}
+
+.new-game-container .content section p {
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px;
+}
+
+.new-game-container .content form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.new-game-container .content form input,
+.new-game-container .content form textarea {
+    margin-top: 8px;
+}

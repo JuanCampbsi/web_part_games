@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "home-games-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/homeGames/HomeGamesWebPart.js",
+          "manifest": "./src/webparts/homeGames/HomeGamesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HomeGamesWebPartStrings": "lib/webparts/homeGames/loc/{locale}.js"
+  }
+}
