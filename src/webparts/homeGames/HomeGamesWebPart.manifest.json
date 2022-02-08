@@ -19,7 +19,7 @@
     "group": { "default": "Other" },
     "title": { "default": "HomeGames" },
     "description": { "default": "Webpart principal do app SPFx" },
-    "officeFabricIconFontName": "Page",
+    "officeFabricIconFontName": "Game",
     "properties": {
       "description": "HomeGames"
     }
