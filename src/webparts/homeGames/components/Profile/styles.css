@@ -1,14 +1,14 @@
 .profile-container {
-  width: 100%;
-  max-width: 1180px;
-  margin: 32px auto;
-  background-color: #fff;
-  padding: 40px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 32px auto;
+    background-color: #fff;
+    padding: 40px;
 }
 
-.profile-container .logo{
-  width: 115px;
-  margin-left: 0px
+.profile-container .logo {
+    width: 115px;
+    margin-left: 0px
 }
 
 .profile-container header {
@@ -54,10 +54,10 @@
 }
 
 .profile-container ul li {
-  background: #f0f0f5;
-  padding: 24px;
-  border-radius: 8px;
-  position: relative;
+    background: #f0f0f5;
+    padding: 24px;
+    border-radius: 8px;
+    position: relative;
 }
 
 .profile-container ul li button {
@@ -77,7 +77,7 @@
     color: #41414d;
 }
 
-.profile-container ul li p + strong {
+.profile-container ul li p+strong {
     margin-top: 32px;
 }
 

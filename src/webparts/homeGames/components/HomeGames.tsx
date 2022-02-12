@@ -1,14 +1,14 @@
-import * as React from 'react';
+import React from 'react';
 import { IHomeGamesProps } from './IHomeGamesProps';
-import { escape } from '@microsoft/sp-lodash-subset';
-import { App } from './AppForm/App';
+import { Routes } from './Routes';
 
-export default class HomeGames extends React.Component<IHomeGamesProps, {}> {
-  public render(): React.ReactElement<IHomeGamesProps> {
-    return (
+export default function HomeGamess({ siteUrl }: IHomeGamesProps) {
+  return (
+    <>
       <div className="backgroundApp">
-        <App siteUrl={this.props.siteUrl}/>
+        <Routes siteUrl={siteUrl}/>
       </div>
-    );
-  }
+    </>
+  )
 }
+

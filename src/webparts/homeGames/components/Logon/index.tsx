@@ -1,5 +1,4 @@
-//rsf component function
-import * as React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { sp } from '@pnp/sp';
 
@@ -7,10 +6,10 @@ require('./styles.css');
 const logoImg = require("../../../../stylelibrary/images/logo.png") as string;
 const gamesimg = require("../../../../stylelibrary/images/games.png") as string;
 
-function Logon() {
-
-    const [id, setId] = React.useState('');
+export default function Logon() {
+    const [id, setId] = useState('');
     const history = useHistory();
+
 
     async function handleLogin(e) {
         e.preventDefault();
@@ -58,4 +57,4 @@ function Logon() {
     );
 }
 
-export default Logon;
+

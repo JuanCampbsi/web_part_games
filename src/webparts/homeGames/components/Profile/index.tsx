@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash2 } from 'react-icons/fi';
 import { sp } from '@pnp/sp';
@@ -8,35 +8,30 @@ const logoImg = require("../../../../stylelibrary/images/logo.png") as string;
 
 export default function Profile(props) {
     const history = useHistory();
-    const [games, setGames] = React.useState([]);
+    const [games, setGames] = useState([]);
 
     const Nome = localStorage.getItem('userName');
     const userId = localStorage.getItem('userId');
 
-    React.useEffect(() => {
-        async function loadgames() {
-          await sp.web.lists
-            .getByTitle("Games")
-            .select("ID, Title, Description, Price, UserId, DefaultImage")
-            .items
-            .filter(`UserId eq ${userId}`)
-            .top(5000)
-            .get()
-            .then(items => {
-                setGames(items);
-            },
-            (err) => {
-              console.log("Erro ao carregar! ", err);
-            });
-        }
-
-        loadgames();
-
-      }, []);
+    async function loadgames() {
+      await sp.web.lists
+        .getByTitle("Games")
+        .select("ID, Title, Description, Price, UserId, DefaultImage")
+        .items
+        .filter(`UserId eq ${userId}`)
+        .top(5000)
+        .get()
+        .then(items => {
+            setGames(items);
+        },
+        (err) => {
+          console.log("Erro ao carregar! ", err);
+        });
+    }
 
     async function handleDeletegame(id) {
-        try {
-
+        try
+        {
             await sp.web.lists
             .getByTitle("Games")
             .items.getById(id)
@@ -68,6 +63,10 @@ export default function Profile(props) {
         localStorage.clear();
         history.push('/');
     }
+
+    useEffect(() => {
+      loadgames();
+    }, []);
 
     return (
         <div className="profile-container">
